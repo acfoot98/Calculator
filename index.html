@@ -19,9 +19,14 @@
         answer = window.answerField
         number1 = window.number1Field
         number2 = window.number2Field
+
+        const multiplyBtn = document.getElementById("multiply").addEventListener("click", onMultiplyBtnClicked);
+
+        const divideBtn = document.getElementById("divide").addEventListener("click", onDivideBtnClicked);
     }
+
     window.onload = init;
-    //document.addEventListener("load", init);
+    //document.addEventListener("DOMContentLoaded", init);
 </script>
 <body>
     Number 1: <input id="number1Field"><br><br>
@@ -29,8 +34,8 @@
     <p>
         <button id="add" onclick="onAddBtnClicked()">Add</button>
         <button id="subtract" onclick="onSubtractBtnClicked()">Subtract</button>
-        <button id="multiply" onclick="onMultiplyBtnClicked()">Multiply</button>
-        <button id="divide" onclick="onDivideBtnClicked()">Divide</button>
+        <button id="multiply">Multiply</button>
+        <button id="divide">Divide</button>
     </p>
     Answer: <input id="answerField" readonly>
 </body>
