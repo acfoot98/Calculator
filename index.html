@@ -1,3 +1,4 @@
+<head>
 <script>
     function onAddBtnClicked(){
         answer.value = Number(number1.value) + Number(number2.value)
@@ -20,6 +21,9 @@
         number1 = window.number1Field
         number2 = window.number2Field
 
+        //SET FOCUS
+        number1.focus();
+        
         const multiplyBtn = document.getElementById("multiply").addEventListener("click", onMultiplyBtnClicked);
 
         const divideBtn = document.getElementById("divide").addEventListener("click", onDivideBtnClicked);
@@ -28,9 +32,10 @@
     window.onload = init;
     //document.addEventListener("DOMContentLoaded", init);
 </script>
-<body>
-    Number 1: <input id="number1Field"><br><br>
-    Number 2: <input id="number2Field">
+</head>
+<body style="font-family: sans-serif; background-color:azure">
+    Number 1: <input id="number1Field" type="number"><br><br>
+    Number 2: <input id="number2Field" type="number">
     <p>
         <button id="add" onclick="onAddBtnClicked()">Add</button>
         <button id="subtract" onclick="onSubtractBtnClicked()">Subtract</button>
